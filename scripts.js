@@ -38,7 +38,7 @@ function stringExpansion(str){
 	// Clear array from empty values
     var arrNumbers = chooseNumbers.filter((element) => { return element !== ""});
 
-	// Divide our string in array of chars and take the lastone, after that convert it into Integer
+	// Divide our string in array of cha	rs and take the lastone, after that convert it into Integer
     arrNumbers = arrNumbers.map((element) => {return element.split('').pop()}).map((element) => {return parseInt(element)});
 
 	// Clear array from empty values
@@ -68,4 +68,27 @@ function largest() {
 function smallest() {
 	var arr = [].slice.call(arguments);
 	return Math.min.apply(null,arr);
+}
+
+// 7
+function transform(arr){
+	var arrFunc = [];
+    var getTheValue = function() {
+        return this.value;
+    }
+
+    for(var i = 0; i < arr.length; i++) {
+        obj = {
+            value: arr[i],
+        }
+        arrFunc.push(getTheValue.bind(obj));
+    }
+
+    return arrFunc;
+}
+
+// 8
+function sum() {
+	var arr = [].slice.call(arguments);
+	return arr.reduce((a,b) => {return a+b;});
 }
