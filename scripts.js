@@ -58,3 +58,14 @@ function stringExpansion(str){
         return completeString;
     }
 }
+
+// 6
+function largest() {
+	var arr = [].slice.call(arguments);
+	return Math.max.apply(null,arr);
+}
+
+function smallest() {
+	var arr = [].slice.call(arguments);
+	return Math.min.apply(null,arr);
+}
