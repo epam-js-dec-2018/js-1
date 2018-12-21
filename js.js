@@ -39,16 +39,40 @@ function convert(obj) {
 // Complete the method/function so that it converts dash/underscore delimited words into camel casing.
 // The first word within the output should be capitalized only if the original word was capitalized.
 function toCamelCase(str) {
-    if (str.indexOf('-'))
+    if (str.indexOf('-') !== -1) {
         str = str.split('-');
-    else
-        if (str.indexOf('_'))
-            str = str.split('_');
+    }
+    else if (str.indexOf('_') !== -1) {
+        str = str.split('_');
+    }
+    str = str.map(function (item,i) {
+        if (i===0) {
+            var char = item[0];
+            item = item.toLowerCase().split('');
+            item[0] = char;
+            return item.join('');
+        }
+        else {
+            var char = item[0].toUpperCase();
+            item = item.toLowerCase().split('');
+            item[0] = char;
+            return item.join('');
+        }
+    }).join('');
     return str;
 }
 // #4
 // Write a function that takes a sentence (string) and reverses each word in the sentence.
 function reverse (str) {
+    str = str.split(' ');
+    str = str.map(function (item) {
+        var item = item.split('');
+        var res = [];
+        for (var i =item.length-1; i>=0;i--) {
+            res.push(item[i]);
+        }
+        return res.join('');
+    }).join(' ');
     return str;
 }
 // #5
@@ -195,45 +219,45 @@ console.log(toCamelCase("The_Stealth_Warrior"));    // "TheStealthWarrior"
 
 console.log('\n#4:');
 console.log(reverse(" A fun little challenge! "));  // " A nuf elttil !egnellahc "
-
-console.log('\n#5:');
-console.log(stringExpansion('3D2a5d2f'));   // 'DDDaadddddff'
-console.log(stringExpansion('3d332f2a'));   // 'dddffaa'
-console.log(stringExpansion('abcde'));      // 'abcde'
-
-console.log('\n#6:');
-console.log(largest(2, 0.1, -5, 100, 3));   // 100
-console.log(smallest(2, 0.1, -5, 100, 3));  // -5
-
-console.log('\n#7:');
-const baseArray = [10, 20, 30, 40, 50];
-try {
-    const newArray = transform(baseArray);
-    console.log(newArray[3]()); // should return 40
-    console.log(newArray[4]()); // should return 50
-}
-catch (e) {
-    console.log(e.message);
-}
-
-
-
-console.log('\n#8:');
-try {
-    console.log(sum(1,3,5,7)); //should return 16
-}
-catch (e) {
-    console.log(e.message);
-}
-
-
-console.log('\n#10:');
-function addPropToNumber(number) { return this.prop + number; }
-// var bound = addPropToNumber.myBind({ prop: 9 });
-// bound(1); // 10
-
-console.log('\n#9:');
-countDown(3); //3 2 1 0
+//
+// console.log('\n#5:');
+// console.log(stringExpansion('3D2a5d2f'));   // 'DDDaadddddff'
+// console.log(stringExpansion('3d332f2a'));   // 'dddffaa'
+// console.log(stringExpansion('abcde'));      // 'abcde'
+//
+// console.log('\n#6:');
+// console.log(largest(2, 0.1, -5, 100, 3));   // 100
+// console.log(smallest(2, 0.1, -5, 100, 3));  // -5
+//
+// console.log('\n#7:');
+// const baseArray = [10, 20, 30, 40, 50];
+// try {
+//     const newArray = transform(baseArray);
+//     console.log(newArray[3]()); // should return 40
+//     console.log(newArray[4]()); // should return 50
+// }
+// catch (e) {
+//     console.log(e.message);
+// }
+//
+//
+//
+// console.log('\n#8:');
+// try {
+//     console.log(sum(1,3,5,7)); //should return 16
+// }
+// catch (e) {
+//     console.log(e.message);
+// }
+//
+//
+// console.log('\n#10:');
+// function addPropToNumber(number) { return this.prop + number; }
+// // var bound = addPropToNumber.myBind({ prop: 9 });
+// // bound(1); // 10
+//
+// console.log('\n#9:');
+// countDown(3); //3 2 1 0
 
 
 
