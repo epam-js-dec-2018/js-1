@@ -92,3 +92,18 @@ function sum() {
 	var arr = [].slice.call(arguments);
 	return arr.reduce((a,b) => {return a+b;});
 }
+
+// 9
+function countDown(param) {
+    var counter = param;
+    function innerFun() {
+        console.log(counter);
+        counter--;
+        if(counter < 0) {
+            clearInterval(interval);
+        }
+    }
+    var interval = setInterval(innerFun,1000);
+}
+
+// 10
