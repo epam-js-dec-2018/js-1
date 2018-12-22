@@ -29,11 +29,15 @@ function splitAndMerge (str, sp) {
 // #2
 // Convert a hash into an array. Nothing more, Nothing less.
 function convert(obj) {
-    // Google
-    return []
-    // for (var i=0;i<obj.length;i++){
-    //     console.log(a);
-    // }
+    if (obj instanceof Object) {
+        var array = [];
+        for (var item in obj) {
+            array.push([item.toString(),obj[item]])
+        }
+        return array;
+    }
+    else
+        return ;
 }
 // #3
 // Complete the method/function so that it converts dash/underscore delimited words into camel casing.
@@ -219,7 +223,7 @@ console.log(toCamelCase("The_Stealth_Warrior"));    // "TheStealthWarrior"
 
 console.log('\n#4:');
 console.log(reverse(" A fun little challenge! "));  // " A nuf elttil !egnellahc "
-//
+
 // console.log('\n#5:');
 // console.log(stringExpansion('3D2a5d2f'));   // 'DDDaadddddff'
 // console.log(stringExpansion('3d332f2a'));   // 'dddffaa'
