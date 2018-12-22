@@ -107,3 +107,11 @@ function countDown(param) {
 }
 
 // 10
+Function.prototype.myBind = function (obj) {
+	var args = [].slice.call(arguments);
+	args = args.slice(1);
+    var fn = this;
+    return function () {
+        return fn.apply(obj,args);
+    };
+}
