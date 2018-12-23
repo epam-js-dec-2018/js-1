@@ -32,13 +32,15 @@ function convert(obj) {
     if (obj instanceof Object) {
         var array = [];
         for (var item in obj) {
-            array.push([item.toString(),obj[item]])
+            array.push([item,obj[item]])
         }
         return array;
     }
     else
         return ;
 }
+
+
 // #3
 // Complete the method/function so that it converts dash/underscore delimited words into camel casing.
 // The first word within the output should be capitalized only if the original word was capitalized.
@@ -70,7 +72,7 @@ function toCamelCase(str) {
 function reverse (str) {
     str = str.split(' ');
     str = str.map(function (item) {
-        var item = item.split('');
+        item = item.split('');
         var res = [];
         for (var i =item.length-1; i>=0;i--) {
             res.push(item[i]);
@@ -144,24 +146,6 @@ function stringExpansion (str) {
             }
             else
                 return str;
-
-    // if (str === ' ' || str === '')
-    //     return str;
-    // else {
-    //     var res='';
-    //     for (var i=0;i<str.length-1;i++) {
-    //         if (str[i] >= '0' && str[i] <='9' ) {
-    //             if (str[i+1] >='a' && str[i+1] <='z' || str[i+1] >='A' && str[i+1] <='Z')
-    //                 for (var j=0;j<str[i];j++) {
-    //                     res+=str[i+1];
-    //                 }
-    //         }
-    //         else {
-    //             res+=str[i];
-    //         }
-    //     }
-    //     return res;
-    // }
 }
 
 // #6
@@ -283,6 +267,13 @@ function countDown(num) {
 // Write a polyfill for a .bind() function and save it in Function.prototype.myBind().
 // myBind() should work in an exact same way as the usual bind()
 // - take context as a first parameter and the list of arguments separated by comma.
+Function.prototype.myBind = function (context) {
+    var func = this;
+    return function() {
+        return func.apply(context, arguments);
+    };
+};
+
 
 // main entry point
 console.log('#1:');
@@ -331,47 +322,11 @@ catch (e) {
     console.log(e.message);
 }
 
-//
-// console.log('\n#10:');
-// function addPropToNumber(number) { return this.prop + number; }
-// // var bound = addPropToNumber.myBind({ prop: 9 });
-// // bound(1); // 10
-//
-// console.log('\n#9:');
-// countDown(3); //3 2 1 0
 
+console.log('\n#10:');
+function addPropToNumber(number) { return this.prop + number; }
+var bound = addPropToNumber.myBind({ prop: 9 });
+console.log(bound(1)); // 10
 
-
-
-// function isIsogram(str){
-//     str = str.toLowerCase();
-//     var a = [];
-//     for (var i =0;i<str.length;i++)
-//     {
-//         if (a[str[i]]) {
-//             return false;
-//         }
-//         else
-//             a.push(str[i])
-//     }
-//     console.log(a);
-//     return true;
-// }
-// console.log(isIsogram( "aba" ));
-
-
-// This is fairly trivial to do with Array.prototype.reduce:
-//
-// var arr = [
-//     { key: 'foo', val: 'bar' },
-//     { key: 'hello', val: 'world' }
-// ];
-//
-// var result = arr.reduce(function(map, obj) {
-//     map[obj.key] = obj.val;
-//     return map;
-// }, {});
-//
-// console.log(result);
-// // { foo: 'bar', hello: 'world' }
-// Note: Array.prototype.reduce() is IE9+, so if you need to support older browsers you will need to polyfill it.
+console.log('\n#9:');
+countDown(3); //3 2 1 0
