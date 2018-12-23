@@ -85,7 +85,83 @@ function reverse (str) {
 // preceding that numeric value. There should be no numeric characters in the final string.
 // Empty strings should return an empty string.
 function stringExpansion (str) {
-    return str;
+    if (str.length === 1) {
+       return str[0] >='a' && str[0] <='z' || str[0] >='A' && str[0] <='Z' ? str: '';
+    }
+    else
+        if (str.length === 2)
+        {
+            if (str[0] >= '0' && str[0] <='9' )
+            {
+                if (str[1] >='a' && str[1] <='z' || str[1] >='A' && str[1] <='Z')
+                {
+                    var res = '';
+                    for (var j=0;j<str[0];j++)
+                        res+=str[1];
+                    return res;
+                }
+                else
+                    return '';
+
+            }
+            else {
+                if (str[1] >='a' && str[1] <='z' || str[1] >='A' && str[1] <='Z')
+                    return str;
+                else
+                    return str[0];
+            }
+        }
+        else
+            if (str.length >2) {
+                var res = '';
+                // first iteration
+                if (str[0] >= '0' && str[0] <='9' )
+                {
+                    if (str[1] >='a' && str[1] <='z' || str[1] >='A' && str[1] <='Z')
+                        for (var j=0;j<str[0];j++)
+                            res+=str[1];
+                }
+                else {
+                    if (str[1] >='a' && str[1] <='z' || str[1] >='A' && str[1] <='Z')
+                        res=str[0]+str[1];
+                    else
+                        res = str[0];
+                }
+                // iterations > 1
+                for (var i=1;i<str.length-1;i++) {
+                    if (str[i] >= '0' && str[i] <='9' ) {
+                        if (str[i+1] >='a' && str[i+1] <='z' || str[i+1] >='A' && str[i+1] <='Z')
+                            for (var j=0;j<str[i];j++)
+                                res+=str[i+1];
+                    }
+                    else {
+                        if (str[i+1] >='a' && str[i+1] <='z' || str[i+1] >='A' && str[i+1] <='Z')
+                            res+=str[i+1];
+                    }
+                }
+                return res;
+
+            }
+            else
+                return str;
+
+    // if (str === ' ' || str === '')
+    //     return str;
+    // else {
+    //     var res='';
+    //     for (var i=0;i<str.length-1;i++) {
+    //         if (str[i] >= '0' && str[i] <='9' ) {
+    //             if (str[i+1] >='a' && str[i+1] <='z' || str[i+1] >='A' && str[i+1] <='Z')
+    //                 for (var j=0;j<str[i];j++) {
+    //                     res+=str[i+1];
+    //                 }
+    //         }
+    //         else {
+    //             res+=str[i];
+    //         }
+    //     }
+    //     return res;
+    // }
 }
 
 // #6
@@ -224,36 +300,37 @@ console.log(toCamelCase("The_Stealth_Warrior"));    // "TheStealthWarrior"
 console.log('\n#4:');
 console.log(reverse(" A fun little challenge! "));  // " A nuf elttil !egnellahc "
 
-// console.log('\n#5:');
-// console.log(stringExpansion('3D2a5d2f'));   // 'DDDaadddddff'
-// console.log(stringExpansion('3d332f2a'));   // 'dddffaa'
-// console.log(stringExpansion('abcde'));      // 'abcde'
-//
-// console.log('\n#6:');
-// console.log(largest(2, 0.1, -5, 100, 3));   // 100
-// console.log(smallest(2, 0.1, -5, 100, 3));  // -5
-//
-// console.log('\n#7:');
-// const baseArray = [10, 20, 30, 40, 50];
-// try {
-//     const newArray = transform(baseArray);
-//     console.log(newArray[3]()); // should return 40
-//     console.log(newArray[4]()); // should return 50
-// }
-// catch (e) {
-//     console.log(e.message);
-// }
-//
-//
-//
-// console.log('\n#8:');
-// try {
-//     console.log(sum(1,3,5,7)); //should return 16
-// }
-// catch (e) {
-//     console.log(e.message);
-// }
-//
+console.log('\n#5:');
+console.log(stringExpansion('3D2a5d2f'));   // 'DDDaadddddff'
+console.log(stringExpansion('3d332f2a'));   // 'dddffaa'
+console.log(stringExpansion('abcde'));      // 'abcde'
+
+
+console.log('\n#6:');
+console.log(largest(2, 0.1, -5, 100, 3));   // 100
+console.log(smallest(2, 0.1, -5, 100, 3));  // -5
+
+console.log('\n#7:');
+const baseArray = [10, 20, 30, 40, 50];
+try {
+    const newArray = transform(baseArray);
+    console.log(newArray[3]()); // should return 40
+    console.log(newArray[4]()); // should return 50
+}
+catch (e) {
+    console.log(e.message);
+}
+
+
+
+console.log('\n#8:');
+try {
+    console.log(sum(1,3,5,7)); //should return 16
+}
+catch (e) {
+    console.log(e.message);
+}
+
 //
 // console.log('\n#10:');
 // function addPropToNumber(number) { return this.prop + number; }
