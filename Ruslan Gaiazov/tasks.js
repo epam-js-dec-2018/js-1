@@ -1,4 +1,4 @@
-//#1 - completed
+//#1
 function splitAndMerge(str, sp) {
 	var strSplit = str.split(' '); 
 	var strMap = strSplit.map(function(name) {
@@ -8,7 +8,7 @@ function splitAndMerge(str, sp) {
 }
 alert(splitAndMerge("My name is John", " "))
 
-//#2 - completed
+//#2
 function convert(hash) {
 	var array = [];
 	for (var i in hash) {
@@ -17,7 +17,27 @@ function convert(hash) {
 	return array;
 }
 
-//#4 - completed
+//№3
+function toCamelCase(str) {
+	if (str.search(/-/i) != -1) {
+		var str1  = str.split('-');
+		var str2 = [];
+		for (var i = 0; i < str1.length; i++) {
+		    str2[i] = str1[i][0].toUpperCase() + str1[i].slice(1);
+		}
+		return str2.join('');
+	} else if (str.search(/_/i) != -1) {
+		var str1  = str.split('_');
+		var str2 = [];
+		for (var i = 0; i < str1.length; i++) {
+		    str2[i] = str1[i][0].toUpperCase() + str1[i].slice(1);
+		}
+		return str2.join('');
+	}
+}
+alert(toCamelCase("the-stealth-warrior"))
+
+//#4
 function toReverseString(str) {
 	var strSplit = str.split(' ');
 	var strReverse = strSplit.map(function(name) {
@@ -27,7 +47,7 @@ function toReverseString(str) {
 }
 alert(toReverseString(" A fun little challenge! "))
 
-//#6 - completed
+//#6
 function largest() {
 	for (var i = 0; i < arguments.length; i++) {
 		if (arguments[i] > arguments[0]) {
@@ -61,14 +81,14 @@ function sum() {
 	
 }
 
-//#9 - completed
+//#9
 function countDown(number) {
 	for (var i = 3; i <= number; i++) {
 	    (function(i) {
 	        setTimeout(function(){
 	          	console.log(number - i);
 	        }, 1000*i);
-    	})(i);
+    	    })(i);
 	}
 } 
 countDown(3)
