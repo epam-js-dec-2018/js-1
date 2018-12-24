@@ -4,9 +4,7 @@
  * @returns {String}
  */
 module.exports = function (str, sp) {
-    var worldsArray = [];
-    str.split(' ').forEach(function(substr) {
+    return str.split(' ').forEach(function(substr) {
         worldsArray.push(substr.split('').join(sp));
-    });
-	return worldsArray.join(' ');
+    }).join(' ');
 };

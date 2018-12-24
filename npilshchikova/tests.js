@@ -120,13 +120,6 @@ function testAll() {
     );
 
     console.log('Task 8 ok');
-
-    // task 9
-    var countDown = require('./9.js');
-    
-    countDown(3);  // there are console-only output to check
-
-    console.log('Task 9 ok');
 }
 
 testAll();
