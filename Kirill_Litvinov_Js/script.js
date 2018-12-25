@@ -104,7 +104,18 @@ const newArray = transform(baseArray);
 console.log(newArray[3]()); // should return 40
 console.log(newArray[4]()); // should return 50
 
-// Восьмая задача - разбираюсь как сделать
+// Восьмая задача
+
+function sum() {
+    var arr = [].slice.apply(arguments);
+    if(arr.length > 0) {
+        return arr.pop() + sum.apply(this, arr);
+    } else {
+        return 0;
+    }
+}
+
+console.log(sum(1,3,5,7));
 
 // Девятая задача 
 
