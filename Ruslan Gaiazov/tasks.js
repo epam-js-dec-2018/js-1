@@ -47,6 +47,27 @@ function toReverseString(str) {
 }
 alert(toReverseString(" A fun little challenge! "))
 
+//#5
+function stringExpansion(str) {
+	var arr0 = str.match(/[0-9][A-Z]/ig);
+	var arr1 = str.split(/[0-9][A-Z]/ig);
+	var x = "";
+
+	if (arr0) {
+		arr0.forEach(function(element, index) {
+			x += arr1[index].split(/[0-9]/g).join("");
+			for (var i = 0; i < element[0]; i++) {
+				x += element[1];  
+			}
+		});
+		x += arr1[arr1.length - 1];
+
+		return x;
+	} else
+		return str;
+}
+stringExpansion('3D2a5d2f')
+
 //#6
 function largest() {
 	for (var i = 0; i < arguments.length; i++) {
@@ -57,6 +78,7 @@ function largest() {
 	return arguments[0];
 }
 largest(2, 0.1, -5, 200, 100, 7000, 32, 36, 78, -125222)
+
 function smallest() {
 	for (var i = 0; i < arguments.length; i++) {
 		if (arguments[i] < arguments[0]) {
@@ -67,7 +89,7 @@ function smallest() {
 }
 smallest(2, 0.1, -5, 200, 100, 7000, 32, 36, 78, -125222)
 
-//#8
+//#8 - in progress
 //without recursion
 function sum() {
 	var s = 0;
@@ -92,3 +114,5 @@ function countDown(number) {
 	}
 } 
 countDown(3)
+
+//#10 - in progress
