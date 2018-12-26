@@ -24,7 +24,9 @@ console.log(convert({name: 'Jeremy', age: 24, role: 'Software Engineer'}));
 //------------- ** 3 ** -------------//
 
 function toCamelCase(str) {
-    return str.replace(/[-_]/g, '');
+    return str.replace(/([-_])(\w)/g, function(match, p1, p2) {
+        return p2.toUpperCase();
+    });
 }
 
 console.log(toCamelCase("the-stealth-warrior"));
