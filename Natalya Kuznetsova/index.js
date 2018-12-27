@@ -40,11 +40,14 @@ function challenge(str) {
 console.log(challenge('A fun little challenge!'));
 
 //task5
+function isNumber(n) {
+   return !isNaN(parseFloat(n)) && isFinite(n);
+}
 function stringExpansion(str) {
 var newStr = '';
 for (var i = 0; i < str.length; i++) {
-  if (!isNaN(parseFloat(str[i])) && isFinite(str[i])) {
-      for (var j = 0; j < parseInt(str[i]); j++) {
+  if (isNumber(str[i])) {
+      for (var j = 0; j < +str[i] - 1; j++) {
          newStr += str[i+1];
       }
     } else {
