@@ -50,6 +50,13 @@ console.log('#4 reverseWordsInSentence(A fun little challenge!)');
 console.log(reverseWordsInSentence("A fun little challenge! "))
 
 // 5
+// first variant
+function stringExpansionTwo(str) {
+    return str.replace(/(\d+)(\w)/g,function(match,p1,p2){
+        return p2.repeat(p1 % 10);
+    })
+}
+// second variant
 function stringExpansion(str){
     var regNumbers = /\D+/;
     var chooseNumbers = str.split(regNumbers);
