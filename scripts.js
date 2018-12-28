@@ -56,12 +56,10 @@ function stringExpansion(str){
     var regStr = /\d+/;
     var chooseLetters = str.split(regStr);
 
-	// Clear array from empty values
-    var arrNumbers = chooseNumbers.filter((element) => { return element !== ""});
-
-	// Divide our string in array of cha	rs and take the lastone, after that convert it into Integer
-    arrNumbers = arrNumbers.map((element) => {return element.split('').pop()}).map((element) => {return parseInt(element)});
-
+    // Clear array from empty values
+    // Divide our string in array of chars and take the lastone, after that convert it into Integer
+    var arrNumbers = chooseNumbers.filter((element) => { return element !== ""}).map((element) => {return element.split('').pop()}).map((element) => {return parseInt(element)});
+    
 	// Clear array from empty values
     var arrLetters = chooseLetters.filter((element) => { return element !== ""});
 
