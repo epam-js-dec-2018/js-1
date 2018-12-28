@@ -27,9 +27,9 @@ console.log(convert({name: 'Jeremy', age: 24, role: 'Software Engineer'}));
 
 // 3
 function toCamelCase(str) {
-    return str.split('-').map((element,index) => {
-    	return index === 0 ? element : element.replace(element[0],element[0].toUpperCase());
-    }).join('_');
+    return str.split(/[_+,\-+]/).map((element, index) =>{
+        return index > 0 ? element.replace(element.charAt(0),element.charAt(0).toUpperCase()) : element;
+    }).join('');
 }
 
 console.log('--------------------------------------');
