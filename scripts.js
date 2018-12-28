@@ -134,9 +134,17 @@ console.log('newArray[3]()');
 console.log(newArray[3]());
 
 // 8
-function sum() {
-	var arr = [].slice.call(arguments);
-	return arr.reduce((a,b) => {return a+b;});
+function sum(){
+    var s = 0;
+    var args = [].slice.call(arguments);
+    var element = args.shift();
+    return (function innerFunc(element) {
+        if (element !== undefined){
+            s += element;
+            innerFunc(args.shift());
+        }
+        return s;    
+    })(element);
 }
 
 console.log('--------------------------------------');
