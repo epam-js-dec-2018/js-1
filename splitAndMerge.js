@@ -11,10 +11,6 @@ function splitAndMerge(str, sp) {
     return words_join.join(" ");
 }
 
-splitAndMerge("Hello World!",",");
-
-
-
 
 //tests
 function test() {

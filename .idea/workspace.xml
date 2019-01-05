@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bf904c5-6cf9-4cf3-a665-04b230a0f698" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/largest_smallest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/camelCase.js" beforeDir="false" afterPath="$PROJECT_DIR$/camelCase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/convert.js" beforeDir="false" afterPath="$PROJECT_DIR$/convert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reverse.js" beforeDir="false" afterPath="$PROJECT_DIR$/reverse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/splitAndMerge.js" beforeDir="false" afterPath="$PROJECT_DIR$/splitAndMerge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stringExpansion.js" beforeDir="false" afterPath="$PROJECT_DIR$/stringExpansion.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,11 +22,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="task3.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/task3.js">
+      <file leaf-file-name="splitAndMerge.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/splitAndMerge.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="25" column="7" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="convert.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/convert.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="camelCase.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/camelCase.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="32" column="7" lean-forward="true" selection-start-line="22" selection-end-line="32" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reverse.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reverse.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="7" lean-forward="true" selection-start-line="6" selection-end-line="16" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stringExpansion.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stringExpansion.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="largest_smallest.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/largest_smallest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -42,6 +92,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/task3.js" />
+        <option value="$PROJECT_DIR$/convert.js" />
+        <option value="$PROJECT_DIR$/camelCase.js" />
+        <option value="$PROJECT_DIR$/reverse.js" />
+        <option value="$PROJECT_DIR$/stringExpansion.js" />
+        <option value="$PROJECT_DIR$/largest_smallest.js" />
       </list>
     </option>
   </component>
@@ -98,11 +153,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="task3.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="task3.js" working-dir="$PROJECT_DIR$" />
+  <component name="RunManager" selected="Node.js.largest_smallest.js">
+    <configuration name="camelCase.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="camelCase.js" working-dir="$PROJECT_DIR$" />
+    <configuration name="convert.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="convert.js" working-dir="$PROJECT_DIR$" />
+    <configuration name="largest_smallest.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="largest_smallest.js" working-dir="$PROJECT_DIR$" />
+    <configuration name="reverse.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="reverse.js" working-dir="$PROJECT_DIR$" />
+    <configuration name="stringExpansion.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="stringExpansion.js" working-dir="$PROJECT_DIR$" />
+    <list>
+      <item itemvalue="Node.js.convert.js" />
+      <item itemvalue="Node.js.camelCase.js" />
+      <item itemvalue="Node.js.reverse.js" />
+      <item itemvalue="Node.js.stringExpansion.js" />
+      <item itemvalue="Node.js.largest_smallest.js" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.task3.js" />
+        <item itemvalue="Node.js.largest_smallest.js" />
+        <item itemvalue="Node.js.stringExpansion.js" />
+        <item itemvalue="Node.js.reverse.js" />
+        <item itemvalue="Node.js.camelCase.js" />
+        <item itemvalue="Node.js.convert.js" />
       </list>
     </recent_temporary>
   </component>
@@ -116,12 +186,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546633944289</updated>
-      <workItem from="1546633948076" duration="1882000" />
+      <workItem from="1546633948076" duration="10482000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1882000" />
+    <option name="totallyTimeSpent" value="10482000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-7" width="1487" height="878" extended-state="6" />
@@ -153,10 +223,53 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/task3.js">
+    <entry file="file://$PROJECT_DIR$/splitAndMerge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="25" column="7" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/convert.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camelCase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="32" column="7" lean-forward="true" selection-start-line="22" selection-end-line="32" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reverse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="7" lean-forward="true" selection-start-line="6" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stringExpansion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/largest_smallest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
         </state>
       </provider>
     </entry>
