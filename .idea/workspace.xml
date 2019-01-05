@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bf904c5-6cf9-4cf3-a665-04b230a0f698" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/countDown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/countDown.js" beforeDir="false" afterPath="$PROJECT_DIR$/countDown.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -64,8 +65,8 @@
       <file leaf-file-name="countDown.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/countDown.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+            <state relative-caret-position="34">
+              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -150,18 +151,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.sum.js">
+  <component name="RunManager" selected="Node.js.countDown.js">
+    <configuration name="countDown.js" type="NodeJSConfigurationType" factoryName="Node.js" nameIsGenerated="true" path-to-js-file="countDown.js" working-dir="$PROJECT_DIR$" />
     <configuration name="largest_smallest.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="largest_smallest.js" working-dir="$PROJECT_DIR$" />
-    <configuration name="reverse.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="reverse.js" working-dir="$PROJECT_DIR$" />
     <configuration name="stringExpansion.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="stringExpansion.js" working-dir="$PROJECT_DIR$" />
     <configuration name="sum.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="sum.js" working-dir="$PROJECT_DIR$" />
     <configuration name="transform.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="transform.js" working-dir="$PROJECT_DIR$" />
     <list>
-      <item itemvalue="Node.js.reverse.js" />
       <item itemvalue="Node.js.stringExpansion.js" />
       <item itemvalue="Node.js.largest_smallest.js" />
       <item itemvalue="Node.js.transform.js" />
       <item itemvalue="Node.js.sum.js" />
+      <item itemvalue="Node.js.countDown.js" />
     </list>
     <recent_temporary>
       <list>
@@ -169,7 +170,6 @@
         <item itemvalue="Node.js.transform.js" />
         <item itemvalue="Node.js.largest_smallest.js" />
         <item itemvalue="Node.js.stringExpansion.js" />
-        <item itemvalue="Node.js.reverse.js" />
       </list>
     </recent_temporary>
   </component>
@@ -183,12 +183,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546633944289</updated>
-      <workItem from="1546633948076" duration="13093000" />
+      <workItem from="1546633948076" duration="16099000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13093000" />
+    <option name="totallyTimeSpent" value="16099000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-7" width="1487" height="878" extended-state="6" />
@@ -286,8 +286,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/countDown.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        <state relative-caret-position="34">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
         </state>
       </provider>
     </entry>
