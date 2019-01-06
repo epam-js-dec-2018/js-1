@@ -6,7 +6,7 @@ function countDown(n) {
             clearInterval(timerId);
         }
         i--;
-    }, 2000);
+    }, 1000);
 }
 
-countDown(5;
+countDown(5);
