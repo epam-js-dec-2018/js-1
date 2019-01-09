@@ -42,14 +42,15 @@ reverse (" A fun little challenge! ")
 
 //5
 function stringExpansion(str) {
-  return str.replace(/(\d)([^\d]*)/g, function(match, p1, p2) {
-      return p2.repeat(p1);
-  })
-}
+	console.log (
+	str.replace(/(\d)([^\d]*)/g, function(match, p1, p2) {
+		return p2.repeat(p1);
+   }))
+ }
 
-console.log(stringExpansion('3D2a5d2f'));
-console.log(stringExpansion('3d332f2a'));
-console.log(stringExpansion('abcde'));
+stringExpansion('3D2a5d2f');
+stringExpansion('3d332f2a');
+stringExpansion('abcde');
 
 //6
 function largest ()  {
