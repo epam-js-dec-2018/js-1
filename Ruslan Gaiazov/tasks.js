@@ -6,7 +6,7 @@ function splitAndMerge(str, sp) {
 	});
 	return strMap.join(' ');
 }
-alert(splitAndMerge("My name is John", " "))
+splitAndMerge("My name is John", " ")
 
 //#2
 function convert(hash) {
@@ -16,8 +16,10 @@ function convert(hash) {
 	}
 	return array;
 }
+var hash = { name: 'Jeremy', age: 24, role: 'Software Engineer' };
+convert(hash)
 
-//№3
+//#3
 function toCamelCase(str) {
 	if (str.search(/-/i) != -1) {
 		var str1  = str.split('-');
@@ -35,7 +37,7 @@ function toCamelCase(str) {
 		return str2.join('');
 	}
 }
-alert(toCamelCase("the-stealth-warrior"))
+toCamelCase("the-stealth-warrior")
 
 //#4
 function toReverseString(str) {
@@ -45,14 +47,13 @@ function toReverseString(str) {
 	});
 	return strReverse.join(' ');
 }
-alert(toReverseString(" A fun little challenge! "))
+toReverseString(" A fun little challenge! ")
 
 //#5
 function stringExpansion(str) {
 	var arr0 = str.match(/[0-9][A-Z]/ig);
 	var arr1 = str.split(/[0-9][A-Z]/ig);
 	var x = "";
-
 	if (arr0) {
 		arr0.forEach(function(element, index) {
 			x += arr1[index].split(/[0-9]/g).join("");
@@ -61,10 +62,10 @@ function stringExpansion(str) {
 			}
 		});
 		x += arr1[arr1.length - 1];
-
 		return x;
-	} else
+	} else {
 		return str;
+	}
 }
 stringExpansion('3D2a5d2f')
 
@@ -89,19 +90,29 @@ function smallest() {
 }
 smallest(2, 0.1, -5, 200, 100, 7000, 32, 36, 78, -125222)
 
-//#8 - in progress
-//without recursion
-function sum() {
-	var s = 0;
-	for (var i = 0; i < arguments.length; i++) {
-		s += arguments[i];
-	}
-	return s;
+//#7
+function transform(array) {
+    return array.map(function(name) {
+        return function() {
+            return name;
+        }
+    });
 }
-//with recursion
+const baseArray = [10, 20, 30, 40, 50];
+const newArray = transform(baseArray);
+newArray[3](); 
+newArray[4](); 
+
+//#8
 function sum() {
-	
+	var array = [].slice.call(arguments);
+    if (arguments.length === 0) {
+        return 0;
+    } else {
+        return array[0] + sum.apply(null, array.slice(1));
+    }
 }
+sum(1, 3, 5, 7)
 
 //#9
 function countDown(number) {
@@ -115,4 +126,13 @@ function countDown(number) {
 } 
 countDown(3)
 
-//#10 - in progress
+//#10
+Function.prototype.myBind = function (name) {
+    var func = this;
+    return function () {
+        return func.apply(name, arguments);
+    }
+}
+function addPropToNumber(number) { return this.prop + number; }
+var bound = addPropToNumber.myBind({ prop: 9 });
+bound(1)
