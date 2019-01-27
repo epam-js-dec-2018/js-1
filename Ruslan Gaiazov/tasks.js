@@ -116,7 +116,7 @@ sum(1, 3, 5, 7)
 
 //#9
 function countDown(number) {
-	for (var i = 3; i <= number; i++) {
+	for (var i = 0; i <= number; i++) {
 	    (function(i) {
 	        setTimeout(function(){
 	          	console.log(number - i);
