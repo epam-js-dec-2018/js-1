@@ -1,10 +1,9 @@
 //#1
 function splitAndMerge(str, sp) {
-	var strSplit = str.split(' '); 
-	var strMap = strSplit.map(function(name) {
+	return str.split(' ').map(function(name) {
 		return name.split('').join(sp);
-	});
-	return strMap.join(' ');
+	})
+	.join(' ');
 }
 splitAndMerge("My name is John", " ")
 
@@ -21,23 +20,19 @@ convert(hash)
 
 //#3
 function toCamelCase(str) {
-	if (str.search(/-/i) != -1) {
-		var str1  = str.split('-');
-		var str2 = [];
-		for (var i = 0; i < str1.length; i++) {
-		    str2[i] = str1[i][0].toUpperCase() + str1[i].slice(1);
+	var str1 = "";
+	for (var i = 0; i < str.length; i++) {
+		if (str[i] == "-" || str[i] == "_") {
+			i++;
+			str1 += str[i].toUpperCase();
+		} else {
+			str1 += str[i];	
 		}
-		return str2.join('');
-	} else if (str.search(/_/i) != -1) {
-		var str1  = str.split('_');
-		var str2 = [];
-		for (var i = 0; i < str1.length; i++) {
-		    str2[i] = str1[i][0].toUpperCase() + str1[i].slice(1);
-		}
-		return str2.join('');
 	}
+	return str1;
 }
-toCamelCase("the-stealth-warrior")
+toCamelCase("the_stealth_warrior")
+toCamelCase("The-stealth-warrior")
 
 //#4
 function toReverseString(str) {
